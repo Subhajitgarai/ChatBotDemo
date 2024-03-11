@@ -31,10 +31,10 @@ def handle_message():
 
     # Check if it's a WhatsApp status update
     if (
-        body.get("entry", [{}])[0]
-        .get("changes", [{}])[0]
-        .get("value", {})
-        .get("statuses")
+            body.get("entry", [{}])[0]
+                    .get("changes", [{}])[0]
+                    .get("value", {})
+                    .get("statuses")
     ):
         logging.info("Received a WhatsApp status update.")
         return jsonify({"status": "ok"}), 200
@@ -54,7 +54,7 @@ def handle_message():
         return jsonify({"status": "error", "message": "Invalid JSON provided"}), 400
 
 
-# Required webhook verifictaion for WhatsApp
+# Required webhook verification for WhatsApp
 def verify():
     # Parse params from the webhook verification request
     mode = request.args.get("hub.mode")
@@ -63,7 +63,7 @@ def verify():
     # Check if a token and mode were sent
     if mode and token:
         # Check the mode and token sent are correct
-        if mode == "subscribe" and token == current_app.config["VERIFY_TOKEN"]:
+        if mode == "subscribe" and token == "1234":
             # Respond with 200 OK and challenge token from the request
             logging.info("WEBHOOK_VERIFIED")
             return challenge, 200
@@ -81,9 +81,8 @@ def verify():
 def webhook_get():
     return verify()
 
+
 @webhook_blueprint.route("/webhook", methods=["POST"])
 @signature_required
 def webhook_post():
     return handle_message()
-
-

@@ -10,13 +10,14 @@ import asyncio
 # --------------------------------------------------------------
 
 load_dotenv()
-ACCESS_TOKEN = os.getenv("ACCESS_TOKEN")
-RECIPIENT_WAID = os.getenv("RECIPIENT_WAID")
-PHONE_NUMBER_ID = os.getenv("PHONE_NUMBER_ID")
-VERSION = os.getenv("VERSION")
+ACCESS_TOKEN ="EAAhqu1TtTwMBOZCV59jKVoZBV1r5uYhMXUFVYOMIqUIY9ZCnLneZA2vkFuHAJr5I9uXKJsK2JbaxBxQ2vWjYr6SryGkuyZB5e25NtHkGeZAAmPL3VvoVCxJwtJr0U5SIZCYAmEhumxR9wqg4YQECuNgCNYKbct17sJUYgGxnaltcOT7zZAwofiZCSjJgQQlMOmavzdHds0W9lZBnk4vKKt5lMZD"
+RECIPIENT_WAID = "+918942053525"
+PHONE_NUMBER_ID = "225908483946704"
+VERSION = "v19.0"
 
-APP_ID = os.getenv("APP_ID")
-APP_SECRET = os.getenv("APP_SECRET")
+APP_ID = "2369152629952259"
+APP_SECRET = "7dbccd52b8578cc636c58b7201fcae0f"
+
 
 # --------------------------------------------------------------
 # Send a template WhatsApp message
@@ -43,14 +44,14 @@ def send_whatsapp_message():
 response = send_whatsapp_message()
 print(response.status_code)
 print(response.json())
-
-# --------------------------------------------------------------
-# Send a custom text WhatsApp message
-# --------------------------------------------------------------
-
-# NOTE: First reply to the message from the user in WhatsApp!
-
-
+#
+# # --------------------------------------------------------------
+# # Send a custom text WhatsApp message
+# # --------------------------------------------------------------
+#
+# # NOTE: First reply to the message from the user in WhatsApp!
+#
+#
 def get_text_message_input(recipient, text):
     return json.dumps(
         {
@@ -88,10 +89,11 @@ data = get_text_message_input(
 )
 
 response = send_message(data)
+print(response.json())
 
-# --------------------------------------------------------------
-# Send a custom text WhatsApp message asynchronously
-# --------------------------------------------------------------
+# # --------------------------------------------------------------
+# # Send a custom text WhatsApp message asynchronously
+# # --------------------------------------------------------------
 
 
 # Does not work with Jupyter!
