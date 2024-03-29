@@ -10,13 +10,13 @@ import asyncio
 # --------------------------------------------------------------
 
 load_dotenv()
-ACCESS_TOKEN ="EAAhqu1TtTwMBOZCV59jKVoZBV1r5uYhMXUFVYOMIqUIY9ZCnLneZA2vkFuHAJr5I9uXKJsK2JbaxBxQ2vWjYr6SryGkuyZB5e25NtHkGeZAAmPL3VvoVCxJwtJr0U5SIZCYAmEhumxR9wqg4YQECuNgCNYKbct17sJUYgGxnaltcOT7zZAwofiZCSjJgQQlMOmavzdHds0W9lZBnk4vKKt5lMZD"
-RECIPIENT_WAID = "+918942053525"
-PHONE_NUMBER_ID = "225908483946704"
+ACCESS_TOKEN =""
+RECIPIENT_WAID = ""
+PHONE_NUMBER_ID = ""
 VERSION = "v19.0"
 
-APP_ID = "2369152629952259"
-APP_SECRET = "7dbccd52b8578cc636c58b7201fcae0f"
+APP_ID = ""
+APP_SECRET = ""
 
 
 # --------------------------------------------------------------
